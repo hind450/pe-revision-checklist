@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Home - PE Assessment System{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to PE Assessment for Learning</h1>
+    <p class="subtitle">Automated marking and feedback system for GCSE PE assessments</p>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h2>📄 Automated Marking</h2>
+        <p>AI-powered marking engine with confidence scoring and Assessment Objective analysis (AO1, AO2, AO3)</p>
+    </div>
+    <div class="feature-card">
+        <h2>📊 Actionable Feedback</h2>
+        <p>Individual student reports with traffic light system, identified misconceptions, and specific next steps</p>
+    </div>
+    <div class="feature-card">
+        <h2>📈 Class Analytics</h2>
+        <p>Comprehensive class insights with teaching recommendations and threshold concept tracking</p>
+    </div>
+</div>
+
+<div class="getting-started">
+    <h2>Getting Started</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Upload Mark Scheme</h3>
+            <p>Upload your PE assessment mark scheme (PDF or DOCX format)</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Upload Student Scripts</h3>
+            <p>Upload student answer scripts (PDF format, multiple files supported)</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Get Results</h3>
+            <p>Download individual reports and class analytics with teaching recommendations</p>
+        </div>
+    </div>
+    <div class="cta">
+        <a href="{{ url_for('upload_mark_scheme') }}" class="btn btn-primary">Start Now</a>
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>System Features</h2>
+    <ul class="feature-list">
+        <li>✅ Automated marking with NLP similarity matching</li>
+        <li>✅ Assessment Objective breakdown (AO1-Knowledge, AO2-Application, AO3-Evaluation)</li>
+        <li>✅ Traffic light system (Red/Amber/Green) by topic</li>
+        <li>✅ Misconception detection and correction guidance</li>
+        <li>✅ Class-level performance analytics</li>
+        <li>✅ Teaching recommendations and intervention prioritization</li>
+        <li>✅ Export reports in TXT and CSV formats</li>
+        <li>✅ GDPR-compliant data handling</li>
+    </ul>
+</div>
+{% endblock %}

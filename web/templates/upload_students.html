@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Student Scripts - PE Assessment System{% endblock %}
+
+{% block content %}
+<div class="upload-section">
+    <h1>Upload Student Scripts</h1>
+    <p class="subtitle">Upload student answer scripts for automated marking</p>
+
+    <div class="upload-card">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="student_scripts">Select Student Script Files</label>
+                <p class="help-text">Accepted format: PDF (Max 16MB per file). You can select multiple files.</p>
+                <input type="file" 
+                       id="student_scripts" 
+                       name="student_scripts" 
+                       accept=".pdf" 
+                       multiple 
+                       required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Process Student Scripts</button>
+                <a href="{{ url_for('upload_mark_scheme') }}" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="info-box">
+        <h3>📝 Student Script Requirements</h3>
+        <ul>
+            <li>PDF format only</li>
+            <li>Include clear question numbers matching the mark scheme</li>
+            <li>One file per student (or multiple files for batch upload)</li>
+            <li>Filename will be used as student name (e.g., "John_Smith.pdf")</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

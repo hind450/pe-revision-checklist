@@ -40,7 +40,28 @@ cd pe-revision-checklist
 pip install -r requirements.txt
 ```
 
-## 💻 Quick Start
+## 🌐 Web Interface (Recommended)
+
+**NEW**: Use the web interface for easy file upload and processing!
+
+```bash
+# Start the web server
+cd web
+python app.py
+```
+
+Then open your browser to: **http://localhost:5000**
+
+### Web Interface Features:
+- 📤 Upload mark schemes (PDF/DOCX)
+- 📝 Upload multiple student scripts at once
+- 📊 View and download all reports
+- 🎨 User-friendly, responsive design
+- No coding required!
+
+See `web/README.md` for detailed instructions.
+
+## 💻 Quick Start (Command Line)
 
 ```python
 from src.main import PEAssessmentSystem

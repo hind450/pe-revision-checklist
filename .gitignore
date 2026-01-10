@@ -47,6 +47,10 @@ example_output/
 *.pdf
 *.docx
 
+# Web application files
+web/uploads/
+web/outputs/
+
 # Models
 models/
 *.pkl
