@@ -1,0 +1,119 @@
+# PE Assessment System Configuration
+
+# System Settings
+system:
+  name: "PE Assessment for Learning"
+  version: "0.1.0"
+  output_directory: "./output"
+  enable_audit_logging: true
+
+# Marking Engine Settings
+marking:
+  confidence_threshold: 0.7  # Minimum confidence to accept without recheck
+  similarity_threshold: 0.6  # Minimum similarity for answer matching
+  keyword_weight: 0.4  # Weight given to keyword matching
+  mastery_threshold: 60.0  # Percentage for mastery level
+
+# Assessment Objectives
+assessment_objectives:
+  ao1:
+    name: "Knowledge"
+    description: "Recall of facts and concepts"
+    keywords: ["knowledge", "recall", "describe", "state", "identify", "define", "name"]
+  ao2:
+    name: "Application"
+    description: "Use of knowledge in context"
+    keywords: ["application", "apply", "explain", "demonstrate", "use", "calculate"]
+  ao3:
+    name: "Evaluation"
+    description: "Analytical and critical thinking"
+    keywords: ["evaluation", "evaluate", "analyse", "assess", "justify", "compare", "discuss"]
+
+# Performance Levels (Traffic Light System)
+performance_levels:
+  high:
+    threshold: 70  # >= 70%
+    color: "green"
+    label: "Strong Performance"
+  medium:
+    threshold: 50  # 50-69%
+    color: "amber"
+    label: "Needs Improvement"
+  low:
+    threshold: 0  # < 50%
+    color: "red"
+    label: "Significant Gaps"
+
+# File Handling
+files:
+  allowed_extensions: [".pdf", ".docx", ".doc"]
+  max_file_size: 10485760  # 10MB in bytes
+  temp_directory: "./temp_files"
+
+# Export Settings
+export:
+  formats: ["txt", "csv"]
+  include_student_names: true
+  anonymize_data: false
+
+# Security & Compliance
+security:
+  enable_data_anonymization: false
+  audit_log_file: "audit.log"
+  encryption_enabled: false
+
+# Common PE GCSE Topics
+topics:
+  - name: "Energy Systems"
+    threshold_concept: true
+    subtopics:
+      - "Aerobic System"
+      - "Anaerobic Glycolysis"
+      - "ATP-PC System"
+  - name: "Skeletal System"
+    threshold_concept: false
+    subtopics:
+      - "Bone Structure"
+      - "Joint Types"
+      - "Movement Types"
+  - name: "Muscular System"
+    threshold_concept: false
+    subtopics:
+      - "Muscle Types"
+      - "Muscle Contraction"
+      - "Antagonistic Pairs"
+  - name: "Movement Analysis"
+    threshold_concept: true
+    subtopics:
+      - "Planes of Movement"
+      - "Axes of Rotation"
+      - "Levers"
+  - name: "Goal Setting"
+    threshold_concept: true
+    subtopics:
+      - "SMART Targets"
+      - "Motivation"
+      - "Performance Planning"
+
+# Common Misconceptions (for detection)
+misconceptions:
+  - pattern: ["aerobic", "without oxygen"]
+    description: "Confused aerobic and anaerobic processes"
+  - pattern: ["anaerobic", "with oxygen"]
+    description: "Confused aerobic and anaerobic processes"
+  - pattern: ["cardiac", "voluntary"]
+    description: "Confused voluntary and involuntary muscles"
+  - pattern: ["skeletal", "involuntary"]
+    description: "Confused voluntary and involuntary muscles"
+  - pattern: ["arteries", "deoxygenated"]
+    description: "Confused arteries and veins"
+  - pattern: ["veins", "oxygenated"]
+    description: "Confused arteries and veins (except pulmonary)"
+  - pattern: ["smart", "easy"]
+    description: "Misapplied SMART target principles"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "system.log"

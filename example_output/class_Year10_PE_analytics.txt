@@ -1,0 +1,44 @@
+================================================================================
+CLASS PERFORMANCE REPORT
+Class ID: Year10_PE
+Number of Students: 2
+================================================================================
+
+CLASS AVERAGE: 27.8%
+
+PERFORMANCE BY QUESTION:
+--------------------------------------------------------------------------------
+Question 1a: 50.0% ██████████
+Question 1b: 33.3% ██████
+Question 2: 12.5% ██
+
+PERFORMANCE BY TOPIC:
+--------------------------------------------------------------------------------
+🔴 Energy Systems: 40.0%
+🔴 Goal Setting: 40.0%
+
+PERFORMANCE BY ASSESSMENT OBJECTIVE:
+--------------------------------------------------------------------------------
+Knowledge (AO1): 10.0%
+Application (AO2): 10.0%
+Evaluation (AO3): 5.0%
+
+TOP MISCONCEPTIONS:
+--------------------------------------------------------------------------------
+⚠️  Confused aerobic and anaerobic processes (1 students)
+⚠️  Misapplied SMART target principles (1 students)
+
+THRESHOLD CONCEPTS BELOW MASTERY:
+--------------------------------------------------------------------------------
+❗ Energy Systems
+❗ Goal Setting
+
+TEACHING RECOMMENDATIONS:
+--------------------------------------------------------------------------------
+1. HIGH PRIORITY: Reteach 'Energy Systems' - This is a threshold concept and is below mastery level (60.0%)
+2. FOCUS: 'Energy Systems' needs attention - Class average is 40.0%
+3. ADDRESS MISCONCEPTION: 'Confused aerobic and anaerobic processes' - Affects 1 students (33% of class)
+4. REVIEW: Question 2 - Only 12.5% average score. Consider revisiting this topic in class.
+5. INTERVENTION: Consider small group work for students scoring below 40% overall
+
+================================================================================
