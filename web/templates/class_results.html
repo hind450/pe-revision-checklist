@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}{{ class_name }} Results - PE Assessment System{% endblock %}
+
+{% block content %}
+<div class="class-results-container">
+    <div class="results-header">
+        <h1>📊 Results for {{ class_name }}</h1>
+        <p class="subtitle">{{ assessment_name }}</p>
+        <div class="results-meta">
+            <span>📅 {{ date }}</span>
+            <span>👥 {{ student_count }} students</span>
+        </div>
+    </div>
+
+    <div class="results-navigation">
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">← Back to Dashboard</a>
+        <button onclick="downloadAllReports()" class="btn btn-primary">Download All Reports</button>
+    </div>
+
+    <!-- Class Analytics Summary -->
+    <div class="analytics-summary">
+        <h2>Class Performance Summary</h2>
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Average Score</h3>
+                <p class="score">{{ class_analytics.average_score }}%</p>
+            </div>
+            <div class="summary-card">
+                <h3>Highest Score</h3>
+                <p class="score">{{ class_analytics.highest_score }}%</p>
+            </div>
+            <div class="summary-card">
+                <h3>Lowest Score</h3>
+                <p class="score">{{ class_analytics.lowest_score }}%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Individual Student Reports -->
+    <div class="student-reports-section">
+        <h2>Individual Student Reports</h2>
+        <div class="search-filter">
+            <input type="text" id="student-search" placeholder="Search by student name..." onkeyup="filterStudents()">
+        </div>
+        <table class="students-table" id="students-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>ID</th>
+                    <th>Score</th>
+                    <th>Performance</th>
+                    <th>Reports</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.score }}%</td>
+                    <td>
+                        <span class="performance-badge {{ student.performance_level }}">
+                            {{ student.performance_level | upper }}
+                        </span>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('download', filename=student.report_txt) }}" class="btn btn-sm">TXT</a>
+                        <a href="{{ url_for('download', filename=student.report_csv) }}" class="btn btn-sm">CSV</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Download Class Reports -->
+    <div class="class-reports-section">
+        <h2>Class Reports</h2>
+        <div class="report-downloads">
+            <div class="report-item">
+                <span>📄 Class Analytics (TXT)</span>
+                <a href="{{ url_for('download', filename=class_analytics_txt) }}" class="btn btn-primary">Download</a>
+            </div>
+            <div class="report-item">
+                <span>📊 Class Analytics (CSV)</span>
+                <a href="{{ url_for('download', filename=class_analytics_csv) }}" class="btn btn-primary">Download</a>
+            </div>
+            <div class="report-item">
+                <span>📋 Student Summary (CSV)</span>
+                <a href="{{ url_for('download', filename=student_summary_csv) }}" class="btn btn-primary">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Misconceptions -->
+    {% if misconceptions %}
+    <div class="misconceptions-section">
+        <h2>Common Misconceptions</h2>
+        <ul class="misconceptions-list">
+            {% for misconception in misconceptions %}
+            <li>
+                <strong>{{ misconception.topic }}:</strong> {{ misconception.description }}
+                <span class="student-count">({{ misconception.count }} students)</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Teaching Recommendations -->
+    {% if recommendations %}
+    <div class="recommendations-section">
+        <h2>Teaching Recommendations</h2>
+        <ol class="recommendations-list">
+            {% for recommendation in recommendations %}
+            <li>{{ recommendation }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+function filterStudents() {
+    const input = document.getElementById('student-search');
+    const filter = input.value.toUpperCase();
+    const table = document.getElementById('students-table');
+    const tr = table.getElementsByTagName('tr');
+    
+    for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[0];
+        if (td) {
+            const txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = '';
+            } else {
+                tr[i].style.display = 'none';
+            }
+        }
+    }
+}
+
+function downloadAllReports() {
+    alert('Downloading all reports as a ZIP file... (Feature coming soon)');
+    // TODO: Implement ZIP download of all reports
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}Teacher Dashboard - PE Assessment System{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>Teacher Dashboard</h1>
+        <p class="subtitle">Upload mark schemes, manage classes, and process student work</p>
+    </div>
+
+    <!-- Class Management Section -->
+    <div class="dashboard-section">
+        <h2>📚 Class Management</h2>
+        <div class="class-management">
+            <div class="class-selector">
+                <label for="current-class">Current Class:</label>
+                <select id="current-class" name="current_class">
+                    <option value="">-- Select or Create Class --</option>
+                    {% for class_name in classes %}
+                    <option value="{{ class_name }}">{{ class_name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="btn btn-secondary" onclick="showAddClassModal()">+ Add New Class</button>
+                <button type="button" class="btn btn-secondary" onclick="showEditClassModal()">✏️ Edit Classes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mark Scheme Upload Section -->
+    <div class="dashboard-section">
+        <h2>📄 Upload Mark Scheme</h2>
+        <div class="upload-section">
+            <form method="POST" action="{{ url_for('dashboard_upload_mark_scheme') }}" enctype="multipart/form-data" id="mark-scheme-form">
+                <div class="form-group">
+                    <label for="mark-scheme-class">Assign to Class:</label>
+                    <select id="mark-scheme-class" name="class_name" required>
+                        <option value="">-- Select Class --</option>
+                        {% for class_name in classes %}
+                        <option value="{{ class_name }}">{{ class_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mark-scheme-file">Mark Scheme (PDF/DOCX):</label>
+                    <input type="file" id="mark-scheme-file" name="mark_scheme" accept=".pdf,.docx,.doc" required>
+                    <small>Accepted formats: PDF, DOCX</small>
+                </div>
+                <div class="form-group">
+                    <label for="assessment-name">Assessment Name:</label>
+                    <input type="text" id="assessment-name" name="assessment_name" placeholder="e.g., Paper 1 - Energy Systems" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload Mark Scheme</button>
+            </form>
+            {% if mark_scheme_status %}
+            <div class="status-box success">
+                <p>✅ Mark scheme loaded: {{ mark_scheme_status }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Student Work Upload Section -->
+    <div class="dashboard-section">
+        <h2>📝 Upload Student Work</h2>
+        <div class="upload-section">
+            <form method="POST" action="{{ url_for('dashboard_upload_students') }}" enctype="multipart/form-data" id="student-work-form">
+                <div class="form-group">
+                    <label for="student-work-class">Assign to Class:</label>
+                    <select id="student-work-class" name="class_name" required>
+                        <option value="">-- Select Class --</option>
+                        {% for class_name in classes %}
+                        <option value="{{ class_name }}" {% if class_name in classes_with_mark_schemes %}{% endif %}>
+                            {{ class_name }} {% if class_name in classes_with_mark_schemes %}✓{% endif %}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <small>Classes with ✓ have mark schemes uploaded</small>
+                </div>
+                <div class="form-group">
+                    <label for="student-scripts">Student Scripts (PDF, multiple files):</label>
+                    <input type="file" id="student-scripts" name="student_scripts" accept=".pdf" multiple required>
+                    <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple files</small>
+                </div>
+                <div class="form-group">
+                    <div id="file-list"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Process Student Work</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quick Access to Results -->
+    <div class="dashboard-section">
+        <h2>📊 Recent Results</h2>
+        <div class="recent-results">
+            {% if recent_results %}
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Assessment</th>
+                        <th>Students</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in recent_results %}
+                    <tr>
+                        <td>{{ result.class_name }}</td>
+                        <td>{{ result.assessment_name }}</td>
+                        <td>{{ result.student_count }}</td>
+                        <td>{{ result.date }}</td>
+                        <td>
+                            <a href="{{ url_for('view_class_results', class_name=result.class_name, assessment_id=result.assessment_id) }}" class="btn btn-sm">View Results</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="no-results">No results yet. Upload a mark scheme and student work to get started!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Add Class Modal -->
+<div id="add-class-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAddClassModal()">&times;</span>
+        <h2>Add New Class</h2>
+        <form method="POST" action="{{ url_for('add_class') }}" id="add-class-form">
+            <div class="form-group">
+                <label for="new-class-name">Class Name:</label>
+                <input type="text" id="new-class-name" name="class_name" placeholder="e.g., Year 10 PE, 11A PE" required>
+            </div>
+            <div class="form-group">
+                <label for="class-description">Description (optional):</label>
+                <textarea id="class-description" name="description" placeholder="e.g., GCSE Year 10 - Autumn Term"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Class</button>
+        </form>
+    </div>
+</div>
+
+<!-- Edit Classes Modal -->
+<div id="edit-class-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditClassModal()">&times;</span>
+        <h2>Edit Classes</h2>
+        <div class="class-list">
+            {% for class_name in classes %}
+            <div class="class-item">
+                <span class="class-name">{{ class_name }}</span>
+                <div class="class-actions">
+                    <button class="btn btn-sm btn-secondary" onclick="editClassName('{{ class_name }}')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteClass('{{ class_name }}')">Delete</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+// File list display
+document.getElementById('student-scripts').addEventListener('change', function(e) {
+    const fileList = document.getElementById('file-list');
+    const files = Array.from(e.target.files);
+    
+    if (files.length > 0) {
+        fileList.innerHTML = '<p><strong>Selected files:</strong></p><ul>' + 
+            files.map(f => '<li>' + f.name + '</li>').join('') + 
+            '</ul>';
+    } else {
+        fileList.innerHTML = '';
+    }
+});
+
+// Modal functions
+function showAddClassModal() {
+    document.getElementById('add-class-modal').style.display = 'block';
+}
+
+function closeAddClassModal() {
+    document.getElementById('add-class-modal').style.display = 'none';
+}
+
+function showEditClassModal() {
+    document.getElementById('edit-class-modal').style.display = 'block';
+}
+
+function closeEditClassModal() {
+    document.getElementById('edit-class-modal').style.display = 'none';
+}
+
+function editClassName(className) {
+    const newName = prompt('Enter new name for class "' + className + '":', className);
+    if (newName && newName !== className) {
+        fetch('{{ url_for("edit_class") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                old_name: className,
+                new_name: newName
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        });
+    }
+}
+
+function deleteClass(className) {
+    if (confirm('Are you sure you want to delete class "' + className + '"? This will also delete all associated data.')) {
+        fetch('{{ url_for("delete_class") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                class_name: className
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        });
+    }
+}
+
+// Close modals when clicking outside
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+}
+</script>
+
+{% endblock %}
