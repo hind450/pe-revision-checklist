@@ -2,6 +2,16 @@
 
 An automated, AI-powered marking and feedback system for GCSE PE assessments, providing accurate marking, actionable feedback, and diagnostic insights aligned with Assessment Objectives (AO1-Knowledge, AO2-Application, AO3-Evaluation).
 
+## 🚀 Quick Start - Get Your Own Website!
+
+**Want to test immediately? Deploy your own instance in 5 minutes:**
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+Or see [QUICK_DEPLOY.md](QUICK_DEPLOY.md) for one-click deployment to Render, Railway, or Heroku.
+
+**Prefer local testing?** See installation instructions below.
+
 ## 🎯 Features
 
 ### Core Capabilities

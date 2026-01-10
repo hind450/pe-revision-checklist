@@ -30,6 +30,7 @@ plotly>=5.14.0
 # Web framework (optional for future API)
 flask>=2.3.0
 flask-cors>=4.0.0
+gunicorn>=20.1.0
 
 # File handling
 python-magic>=0.4.27
