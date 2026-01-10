@@ -1,0 +1,100 @@
+{
+  "examTitle": "GCSE Physical Education - Paper 1",
+  "maxMarks": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "questionText": "Describe aerobic respiration and explain how it provides energy for muscles during exercise.",
+      "maxMarks": 6,
+      "assessmentObjective": "AO1",
+      "markingPoints": [
+        {
+          "description": "Aerobic respiration definition",
+          "keywords": ["aerobic", "oxygen"],
+          "marks": 1
+        },
+        {
+          "description": "Location in mitochondria",
+          "keywords": ["mitochondria"],
+          "marks": 1
+        },
+        {
+          "description": "ATP production",
+          "keywords": ["ATP", "energy"],
+          "marks": 1
+        },
+        {
+          "description": "Use in muscle contraction",
+          "keywords": ["muscle", "contraction"],
+          "marks": 1
+        },
+        {
+          "description": "Chemical equation",
+          "keywords": ["glucose", "carbon dioxide", "water"],
+          "marks": 2
+        }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "Explain the importance of a warm-up before physical activity.",
+      "maxMarks": 4,
+      "assessmentObjective": "AO2",
+      "markingPoints": [
+        {
+          "description": "Injury prevention",
+          "keywords": ["injury", "prevent"],
+          "marks": 1
+        },
+        {
+          "description": "Increases heart rate gradually",
+          "keywords": ["heart rate", "gradual"],
+          "marks": 1
+        },
+        {
+          "description": "Increases blood flow to muscles",
+          "keywords": ["blood flow", "muscle"],
+          "marks": 1
+        },
+        {
+          "description": "Improves flexibility",
+          "keywords": ["flexibility", "stretch"],
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "Evaluate how training principles can improve sporting performance.",
+      "maxMarks": 5,
+      "assessmentObjective": "AO3",
+      "markingPoints": [
+        {
+          "description": "Muscle strength adaptation",
+          "keywords": ["muscle", "strong"],
+          "marks": 1
+        },
+        {
+          "description": "Cardiovascular improvement",
+          "keywords": ["cardiovascular", "fitness", "heart"],
+          "marks": 1
+        },
+        {
+          "description": "Progressive overload principle",
+          "keywords": ["progressive", "overload", "increase"],
+          "marks": 1
+        },
+        {
+          "description": "Specific adaptations (SAID principle)",
+          "keywords": ["specific", "adaptation", "SAID"],
+          "marks": 1
+        },
+        {
+          "description": "Evaluation of training methods",
+          "keywords": ["evaluate", "effective", "compare"],
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

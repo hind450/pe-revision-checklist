@@ -1,0 +1,18 @@
+{
+  "studentId": "STUDENT002",
+  "examDate": "2026-01-10",
+  "answers": [
+    {
+      "questionNumber": 1,
+      "text": "Aerobic respiration is the process that uses oxygen to break down glucose to release energy. It takes place in the mitochondria of cells. The process produces ATP (adenosine triphosphate) which is the energy currency used for muscle contraction during exercise. The chemical equation for aerobic respiration is: glucose + oxygen → carbon dioxide + water + energy (ATP). This is the most efficient way to produce energy for sustained physical activity."
+    },
+    {
+      "questionNumber": 2,
+      "text": "A warm-up before physical activity is essential for several reasons. Firstly, it helps prevent injury by preparing muscles and joints for exercise. The warm-up increases heart rate gradually, which improves blood flow to the working muscles, delivering more oxygen and nutrients. This increased blood flow also helps improve flexibility as muscles become more pliable when warm. Dynamic stretching during the warm-up further enhances range of motion and prepares the body for the specific movements required in the activity."
+    },
+    {
+      "questionNumber": 3,
+      "text": "Training principles are crucial for improving sporting performance. The progressive overload principle states that training intensity must gradually increase to continue making adaptations. This makes muscles stronger and increases cardiovascular fitness. The SAID principle (Specific Adaptation to Imposed Demands) shows that the body adapts specifically to the type of training performed - for example, endurance training improves aerobic capacity while strength training increases muscle mass. Different training methods can be evaluated for their effectiveness. Continuous training is effective for building aerobic endurance but may be less effective for improving power. Interval training combines high and low intensity and is particularly effective for sports requiring both aerobic and anaerobic fitness. Weight training is highly effective for sports requiring strength and power. In conclusion, applying these training principles systematically leads to optimal performance improvements in specific areas relevant to an athlete's sport."
+    }
+  ]
+}
