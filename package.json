@@ -1,0 +1,15 @@
+{
+  "name": "pe-assessment-for-learning",
+  "version": "1.0.0",
+  "description": "Automated PE assessment system with marking and feedback based on AO1-AO3 objectives",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "assess": "node src/cli.js",
+    "example": "node src/cli.js -s examples/student-script.json -m examples/mark-scheme.json",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["assessment", "education", "marking", "feedback", "PE"],
+  "author": "",
+  "license": "MIT"
+}

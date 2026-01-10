@@ -1,0 +1,18 @@
+{
+  "studentId": "STUDENT001",
+  "examDate": "2026-01-10",
+  "answers": [
+    {
+      "questionNumber": 1,
+      "text": "Aerobic respiration uses oxygen to produce energy. It happens in the mitochondria and produces ATP which is used for muscle contraction. The chemical equation is glucose + oxygen → carbon dioxide + water + energy."
+    },
+    {
+      "questionNumber": 2,
+      "text": "A warm-up helps prevent injury and prepares the body for exercise. It increases heart rate gradually and improves blood flow to the muscles. This helps improve flexibility through dynamic stretching."
+    },
+    {
+      "questionNumber": 3,
+      "text": "Training improves performance by making muscles stronger and improving cardiovascular fitness. Progressive overload means gradually increasing training intensity. The SAID principle shows that the body adapts specifically to the type of training performed. Different training methods can be evaluated for effectiveness."
+    }
+  ]
+}

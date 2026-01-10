@@ -1,0 +1,42 @@
+{
+  "examTitle": "GCSE Physical Education - Paper 1",
+  "generalComments": {
+    "overallPerformance": "Students generally performed well on AO1 knowledge questions but struggled with AO3 evaluation questions.",
+    "commonIssues": [
+      "Insufficient detail in answers",
+      "Lack of specific examples",
+      "Limited evaluation and justification"
+    ],
+    "advice": "Students should practice extended writing and ensure they answer all parts of the question."
+  },
+  "questionComments": [
+    {
+      "questionNumber": 1,
+      "comment": "Most students could identify aerobic respiration and ATP, but many missed the chemical equation.",
+      "commonMistakes": [
+        "Confusing aerobic and anaerobic respiration",
+        "Not mentioning mitochondria"
+      ],
+      "exemplarPoints": "Strong answers included the full chemical equation and explained the role of oxygen in the process."
+    },
+    {
+      "questionNumber": 2,
+      "comment": "Students performed adequately but often gave generic answers without specific details.",
+      "commonMistakes": [
+        "Too brief - only stating 'prevents injury'",
+        "Not explaining the physiological changes"
+      ],
+      "exemplarPoints": "Best answers linked warm-up activities to specific physiological responses."
+    },
+    {
+      "questionNumber": 3,
+      "comment": "Evaluation questions proved challenging. Students need to practice justifying their points.",
+      "commonMistakes": [
+        "Describing training methods without evaluating them",
+        "Not using technical terminology correctly",
+        "Lack of comparison between methods"
+      ],
+      "exemplarPoints": "Top responses compared different training principles and evaluated their effectiveness with evidence."
+    }
+  ]
+}
