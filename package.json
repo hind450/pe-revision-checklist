@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "assess": "node src/cli.js",
     "example": "node src/cli.js -s examples/student-script.json -m examples/mark-scheme.json",
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "node tests/basic-tests.js"
   },
   "keywords": ["assessment", "education", "marking", "feedback", "PE"],
   "author": "",
