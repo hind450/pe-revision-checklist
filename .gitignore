@@ -50,9 +50,9 @@ example_output/
 # Web application files
 web/uploads/
 web/outputs/
+web/data/
 
-# Models
-models/
+# ML Models (not source code models)
 *.pkl
 *.h5
 *.pt
