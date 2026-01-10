@@ -43,6 +43,7 @@ htmlcov/
 uploads/
 temp_files/
 output/
+example_output/
 *.pdf
 *.docx
 
