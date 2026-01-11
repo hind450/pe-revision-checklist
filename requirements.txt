@@ -1,0 +1,18 @@
+# Minimal deployment-optimized dependencies
+# Only includes what the application actually uses
+
+# Web framework
+flask>=2.3.0
+gunicorn>=20.1.0
+werkzeug>=2.3.0
+
+# PDF/Document processing
+pdfplumber>=0.9.0
+python-docx>=0.8.11
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Configuration
+pyyaml>=6.0

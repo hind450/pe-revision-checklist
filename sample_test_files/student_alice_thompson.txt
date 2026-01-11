@@ -1,0 +1,36 @@
+Student Name: Alice Thompson
+Student ID: S001
+GCSE PE Paper 1 - Energy Systems
+
+Question 1: Describe the aerobic energy system (3 marks)
+
+The aerobic energy system uses oxygen to break down glucose to produce ATP, which is adenosine triphosphate and is the energy currency of cells. This process occurs in the mitochondria, which are often called the powerhouse of the cell. The aerobic system is used during low-intensity activities that last a long time, such as jogging, cycling, or swimming at a steady pace. It's the most efficient energy system because it produces the most ATP.
+
+Question 2: Explain how the aerobic system is used during a marathon (4 marks)
+
+During a marathon, which lasts over 2 hours for most runners, the aerobic energy system is the primary source of energy. Runners need sustained energy to maintain their pace throughout the 26.2 miles. As they run, they continuously breathe in oxygen from the air. This oxygen is transported by the blood to the working muscles where it's used in the mitochondria to break down glucose and stored fats to produce ATP. Because the marathon is run at a relatively steady, submaximal pace, the aerobic system can meet the energy demands without producing lactic acid, which would cause fatigue. This allows marathon runners to maintain their performance for the entire duration of the race.
+
+Question 3: Evaluate the effectiveness of the aerobic system for different types of athletes (6 marks)
+
+The aerobic energy system is highly effective for endurance athletes such as marathon runners, long-distance cyclists, and swimmers. These athletes benefit because the system provides sustained energy over long periods without producing lactic acid that causes muscle fatigue. For example, a marathon runner can rely almost entirely on aerobic metabolism throughout their race, making it extremely effective for this sport.
+
+However, the aerobic system is much less effective for power and sprint athletes like 100m sprinters, weightlifters, or high jumpers. This is because the aerobic system is relatively slow at producing energy - it can take several minutes to fully activate. Sprinters need immediate, explosive energy that only the ATP-PC system or anaerobic glycolysis can provide in the first few seconds.
+
+The advantages of the aerobic system include: producing large amounts of ATP (38 molecules per glucose), no toxic byproducts (just CO2 and water), and ability to use both carbohydrates and fats as fuel. The disadvantages are: requires constant oxygen supply, slow activation time, and lower power output compared to anaerobic systems.
+
+Therefore, while the aerobic system is excellent for endurance sports, it's inadequate for power-based activities requiring rapid energy production.
+
+Question 4: Define SMART targets and give an example (4 marks)
+
+SMART is an acronym used for goal setting in PE and sports:
+- S = Specific: The goal must be clear and detailed, not vague
+- M = Measurable: You must be able to track progress with numbers or data
+- A = Achievable: The goal must be realistic and possible to accomplish
+- R = Realistic: It should match the athlete's current ability level
+- T = Time-bound: There must be a deadline or timeframe
+
+Example: "I will improve my 1500m running time from 6 minutes 30 seconds to 6 minutes flat within the next 10 weeks by training 4 times per week." This is specific (1500m time), measurable (6:00), achievable (reasonable improvement), realistic (matches ability), and time-bound (10 weeks).
+
+Question 5: Explain the difference between aerobic and anaerobic respiration (3 marks)
+
+The main difference is that aerobic respiration uses oxygen while anaerobic respiration does not. Aerobic respiration produces much more energy - 38 ATP molecules per glucose molecule compared to only 2 ATP from anaerobic respiration. Aerobic respiration is used for low to moderate intensity activities lasting longer periods, while anaerobic is for high-intensity, short-duration activities. Additionally, aerobic respiration produces only carbon dioxide and water as byproducts, whereas anaerobic respiration produces lactic acid which causes muscle fatigue and the burning sensation during intense exercise.

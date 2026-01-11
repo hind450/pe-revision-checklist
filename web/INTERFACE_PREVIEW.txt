@@ -1,0 +1,123 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                     PE ASSESSMENT WEB INTERFACE                              ║
+║                      http://localhost:5000                                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  🎓 PE Assessment for Learning      [ Home ] [ Upload ] [ Reset ]            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│                   Welcome to PE Assessment for Learning                      │
+│           Automated marking and feedback system for GCSE PE                  │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────┐  ┌───────────────────┐  ┌───────────────────┐
+│  📄 Automated      │  │  📊 Actionable    │  │  📈 Class         │
+│     Marking        │  │     Feedback      │  │     Analytics     │
+│                    │  │                    │  │                    │
+│  AI-powered with   │  │  Traffic light    │  │  Teaching         │
+│  AO1, AO2, AO3     │  │  system & next    │  │  recommendations  │
+│  analysis          │  │  steps            │  │  & insights       │
+└───────────────────┘  └───────────────────┘  └───────────────────┘
+
+                        ┌─────────────────────┐
+                        │   [ START NOW ]     │
+                        └─────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                         UPLOAD MARK SCHEME PAGE
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│                         Upload Mark Scheme                                   │
+│                Upload your GCSE PE assessment mark scheme                    │
+│                                                                              │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  Select Mark Scheme File                                            │    │
+│  │  Accepted formats: PDF, DOCX (Max 16MB)                            │    │
+│  │                                                                      │    │
+│  │  [ Choose File ]  No file chosen                                    │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│     [ Upload Mark Scheme ]      [ Cancel ]                                  │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                        UPLOAD STUDENT SCRIPTS PAGE
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│                       Upload Student Scripts                                 │
+│              Upload student answer scripts for automated marking             │
+│                                                                              │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  Select Student Script Files                                        │    │
+│  │  Accepted format: PDF. Select multiple files for batch upload.     │    │
+│  │                                                                      │    │
+│  │  [ Choose Files ]  3 files selected                                 │    │
+│  │    - Emma_Johnson.pdf                                               │    │
+│  │    - Liam_Brown.pdf                                                 │    │
+│  │    - Sophie_Taylor.pdf                                              │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│     [ Process Student Scripts ]      [ Back ]                               │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                             RESULTS PAGE
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│                         Assessment Results                                   │
+│               Class: Class_20260110_120000 | 3 students processed           │
+│                                                                              │
+│  ┌─────────────────────┐        ┌─────────────────────┐                    │
+│  │  👥 Students        │        │  📊 Reports         │                    │
+│  │     Processed       │        │     Generated       │                    │
+│  │                     │        │                     │                    │
+│  │        3            │        │       15            │                    │
+│  └─────────────────────┘        └─────────────────────┘                    │
+│                                                                              │
+│  Download Reports                                                            │
+│  ─────────────────                                                           │
+│                                                                              │
+│  📄 Individual Student Reports (Text)                                        │
+│    📥 student_S001_report.txt                                               │
+│    📥 student_S002_report.txt                                               │
+│    📥 student_S003_report.txt                                               │
+│                                                                              │
+│  📈 Class Analytics (Text)                                                   │
+│    📥 class_Class_20260110_120000_analytics.txt                             │
+│                                                                              │
+│  📊 CSV Data Files                                                           │
+│    📥 student_S001_report.csv                                               │
+│    📥 student_S002_report.csv                                               │
+│    📥 student_S003_report.csv                                               │
+│    📥 class_Class_20260110_120000_analytics.csv                             │
+│    📥 class_student_summary.csv                                             │
+│                                                                              │
+│     [ Process More Students ]  [ Start New ]  [ Home ]                      │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FEATURES:
+✅ Clean, intuitive interface
+✅ Drag & drop file upload
+✅ Real-time progress feedback
+✅ Multiple file batch processing
+✅ Download all reports
+✅ Mobile responsive design
+✅ No coding required
+
+ACCESS: http://localhost:5000
+SETUP: Run ./start_web.sh or python web/app.py

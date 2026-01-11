@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Mark Scheme - PE Assessment System{% endblock %}
+
+{% block content %}
+<div class="upload-section">
+    <h1>Upload Mark Scheme</h1>
+    <p class="subtitle">Upload your GCSE PE assessment mark scheme to begin</p>
+
+    <div class="upload-card">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="mark_scheme">Select Mark Scheme File</label>
+                <p class="help-text">Accepted formats: PDF, DOCX (Max 16MB)</p>
+                <input type="file" 
+                       id="mark_scheme" 
+                       name="mark_scheme" 
+                       accept=".pdf,.docx,.doc" 
+                       required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Upload Mark Scheme</button>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="info-box">
+        <h3>📋 Mark Scheme Requirements</h3>
+        <ul>
+            <li>Include clear question numbers (e.g., Q1, Question 1a, 1.)</li>
+            <li>Specify marks allocated (e.g., [3 marks], (2), 3 marks)</li>
+            <li>List acceptable answers or marking criteria</li>
+            <li>Include keywords for each question</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
