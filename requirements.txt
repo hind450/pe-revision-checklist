@@ -1,51 +1,18 @@
-# Core dependencies
-python>=3.9
+# Minimal deployment-optimized dependencies
+# Only includes what the application actually uses
 
-# PDF processing
-pypdf2>=3.0.0
+# Web framework
+flask>=2.3.0
+gunicorn>=20.1.0
+werkzeug>=2.3.0
+
+# PDF/Document processing
 pdfplumber>=0.9.0
-PyMuPDF>=1.23.0
-
-# Document processing
 python-docx>=0.8.11
-openpyxl>=3.1.0
 
-# NLP and AI
-transformers>=4.30.0
-torch>=2.0.0
-sentence-transformers>=2.2.0
-spacy>=3.5.0
-nltk>=3.8.0
-
-# Data processing and analysis
+# Data processing
 pandas>=2.0.0
 numpy>=1.24.0
-scikit-learn>=1.3.0
 
-# Visualization
-matplotlib>=3.7.0
-seaborn>=0.12.0
-plotly>=5.14.0
-
-# Web framework (optional for future API)
-flask>=2.3.0
-flask-cors>=4.0.0
-gunicorn>=20.1.0
-
-# File handling
-python-magic>=0.4.27
-
-# Utilities
+# Configuration
 pyyaml>=6.0
-python-dotenv>=1.0.0
-
-# Testing
-pytest>=7.4.0
-pytest-cov>=4.1.0
-
-# GDPR compliance
-cryptography>=41.0.0
-
-# Export formats
-reportlab>=4.0.0
-fpdf2>=2.7.0
